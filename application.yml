@@ -1,0 +1,17 @@
+  global:
+    message: Welcome to global microservices environment !! 
+  logging:
+    level: 
+      root: INFO
+  eureka:
+   client:
+     service-url: 
+       defaultZone: http://localhost:8767/eureka/
+  management:
+    endpoints:
+      web: 
+        exposure:
+          include: health, info, refresh
+    endpoint:
+      health:
+        show-details: always
